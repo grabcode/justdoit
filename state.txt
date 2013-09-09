@@ -1,0 +1,18 @@
+https://github.com/k33g/articles/blob/master/2011-08-14-BB-VIEWS.md
+
+http://www.atinux.fr/2011/10/31/backbone-js-tutoriels-et-demo/
+
+http://backbonejs.org/#Collection-add
+
+http://underscorejs.org/#defaults
+
+http://net.tutsplus.com/tutorials/javascript-ajax/best-practices-when-working-with-javascript-templates/
+
+
+
+
+#requirejs for organisation
+
+http://backbonetutorials.com/organizing-backbone-using-modules/
+
+https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/modular-backbone
