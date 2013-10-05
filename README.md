@@ -1,3 +1,29 @@
+TODO
+
+Action CRUD
+Context CRUD
+Objectives CRUD
+Action link to context
+Action link to objectives
+
+
+
+## JUST DO IT
+
+authors: [Alexandre Girard](https://github.com/grabcode)
+
+This is an implementation of the ["Getting things done"](http://en.wikipedia.org/wiki/Getting_Things_Done) methodoly.
+
+Anecdote: my 10 years old niece visited us in Sydney, and I wanted to trigger her interest for programming. The Web stack would be her starting point, and after the exellent (although limited) "Hello world", she started the Todo list. I'm adding some layers (vendors) before publishing it on the Play Store:
+- underscore, backbone : library, maintainability 
+- require.js : structure flavor and "compilation"
+- zepto.js: used mostly for easy DOM manipulation
+- topcoat.io : light and modular css components
+- animate.css : effects in pure css3
+
+
+Use bower
+
 /**
   * Just do it - a "getting things done" implementation
   * Time to act and achieve - stop dreaming or planning

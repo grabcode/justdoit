@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta name="viewport" content="user-scalable = yes">
+	<!--meta name="viewport" content="width=500"-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta charset="utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>justdoit</title>
+	<link rel="stylesheet" href="vendors/topcoat/css/topcoat-mobile-dark.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script data-main="js/main" src="vendors/require.js"></script>
+</head>
+<body>
+	<div class="onscreen">
+		<div id="projects" class="top-left collapse-horizontal expand-vertical">
+			<div class="topcoat-list topcoat-list--light">
+				<h3 class="topcoat-list__header topcoat-list__header--light projects-list__header">Projects</h3>
+				<ul class="topcoat-list__container topcoat-list__container--light projects-list__container overthrow">
+					<li class="topcoat-list__item--light projects-list__item app-list__item--unselected">
+						<span class="projects-list__item--title">Project 1</span>
+						<!--label class="topcoat-checkbox">
+						  <input type="checkbox" class="project-form__status">
+						  <div class="topcoat-checkbox__checkmark topcoat-checkbox__checkmark--light project-form__status--checkbox"></div>
+						</label-->
+					</li>
+					<li class="topcoat-list__item--light projects-list__item app-list__item--unselected">
+					Project 2
+					</li>
+					<li class="topcoat-list__item--light projects-list__item app-list__item--unselected">
+					Project 3
+					</li>
+					<!--li class="topcoat-list__item--light">
+					Project 4
+					</li>
+					<li class="topcoat-list__item--light">
+					Project 5
+					</li>
+					<li class="topcoat-list__item--light">
+					Project 6
+					</li>
+					<li class="topcoat-list__item--light">
+					Project 7
+					</li>
+					<li class="topcoat-list__item--light">
+					Project 8
+					</li>
+					<li class="topcoat-list__item--light">
+					Project 9
+					</li-->
+				</ul>
+			</div>
+			<div class="action-form app-slide-component">
+				<h3 class="topcoat-list__header action-form__header">New project</h3>
+				<form>
+					<input type="text" class="topcoat-text-input project-form__title" value="" placeholder="Title" >
+					<label class="topcoat-checkbox">
+					  <input type="checkbox" class="action-form__status">
+					  <div class="topcoat-checkbox__checkmark action-form__status--checkbox"></div>
+					</label>
+					<textarea class="topcoat-textarea action-form__description" placeholder="Description" ></textarea>
+					<button class="topcoat-button--cta action-form__op" >Create</button>
+					<button class="topcoat-button action-form__op" >Cancel</button>
+				</form>
+			</div>
+		</div>
+		<div id="actions" class="top-right expand-horizontal expand-vertical">
+			<div class="topcoat-list">
+				<h3 class="topcoat-list__header actions-list__header">Actions</h3>
+				<ul class="topcoat-list__container actions-list__container overthrow">
+				</ul>
+			</div>
+			<div class="action-form app-slide-component">
+				<h3 class="topcoat-list__header action-form__header">New action</h3>
+				<form>
+					<input type="text" class="topcoat-text-input action-form__title" value="" placeholder="Title" >
+					<label class="topcoat-checkbox">
+					  <input type="checkbox" class="action-form__status">
+					  <div class="topcoat-checkbox__checkmark action-form__status--checkbox"></div>
+					</label>
+					<textarea class="topcoat-textarea action-form__description" placeholder="Description" ></textarea>
+					<button class="topcoat-button--cta action-form__op" >Create</button>
+					<button class="topcoat-button action-form__op" >Cancel</button>
+				</form>
+			</div>
+		</div>
+		<div id="interactions" class="bottom-left collapse-horizontal collapse-vertical">
+			<button id="add" class="topcoat-button--large interactions-button--large">+</button>
+		</div>
+		<div id="contexts" class="bottom-right expand-horizontal collapse-vertical">
+			<div class="topcoat-list ">
+				<h3 class="topcoat-list__header contexts-list__header">Contexts</h3>
+				<ul class="topcoat-list__container app-list--vertical overthrow">
+          <li class="topcoat-list__item app-list__item--unselected contexts-list__item">Context 1</li>
+          <li class="topcoat-list__item app-list__item--unselected contexts-list__item">Context 2</li>
+          <li class="topcoat-list__item app-list__item--unselected contexts-list__item">Context 3</li>
+          <li class="topcoat-list__item app-list__item--unselected contexts-list__item">Context 4</li>
+          <li class="topcoat-list__item app-list__item--unselected contexts-list__item">Context 5</li>
+     		</ul>
+			</div>
+			<div class="action-form app-slide-component">
+				<h3 class="topcoat-list__header action-form__header">New context</h3>
+				<form>
+					<input type="text" class="topcoat-text-input project-form__title" value="" placeholder="Title" >
+					<label class="topcoat-checkbox">
+					  <input type="checkbox" class="action-form__status">
+					  <div class="topcoat-checkbox__checkmark action-form__status--checkbox"></div>
+					</label>
+					<textarea class="topcoat-textarea action-form__description" placeholder="Description" ></textarea>
+					<button class="topcoat-button--cta action-form__op" >Create</button>
+					<button class="topcoat-button action-form__op" >Cancel</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="actions-template">
+		<% _.each(actions, function(action) { %>
+		<li class="topcoat-list__item" id="<%= action.id %>"><%= action.title %></li>
+		<% }); %>
+	</script>
+</body>
+</html>

@@ -1,36 +1,38 @@
 define([
-	'backbone'
-], function(Backbone){
+	'backbone',
+	'services/utils'
+], function(Backbone, Utils){
 
 	var ContextModel = Backbone.Model.extend({
 
 		defaults: {
-			id: '???',
-			label: 'Be home',
-			nature: 'geographical'
+			id: Utils.guid(),
+			title: '',
+			details: '',
+			nature: ''
 		},
 
 		initialize: function (){
-			console.log( 'ContextModel initialized:' + this.getId() );
-
 			this.bind('invalid', function(model, error){
 				console.log( error );
 			});
 		},
 
-		getId: function(){
-			return this.get('id');
-		},
+		validate: function(attrs) {
+			var validations = {};
 
-		setText : function(value) {
-			this.set({ text : value, validate: true });
-		},
-
-		validate: function( attrs ) {
-			console.log('validate');
 			if(attrs.text === '') {
-				return 'text must be non empty';
+				validations['ERRVAL201'] = 'title must be non empty';
 			}
+
+			if(_.keys(validations).length === 0)
+				return null;
+			else
+				return validations;
+		},
+
+		remove: function(){
+			this.destroy();
 		}
 
 	});

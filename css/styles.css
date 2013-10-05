@@ -1,0 +1,217 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	-webkit-user-select:none;
+	-webkit-text-size-adjust:none;
+}
+.onscreen {
+	/*background-color: blue;*/
+	width: 100%;
+	height: 100%;
+}
+.top-left, .top-right, .bottom-left, .bottom-right {
+	position: absolute;
+	-webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.top-left {
+	background-color: whitesmoke;
+	border-right: 2.5px grey solid;
+	top: 0;
+	left: 0;
+}
+.top-right {
+	top: 0;
+	right: 0;
+}
+.bottom-left {
+	border-top: 2.5px grey solid;
+	bottom: 0;
+	left: 0;
+}
+.bottom-right {
+	background-color: whitesmoke;
+	border-top: 2.5px grey solid;
+	bottom: 0;
+	right: 0;
+}
+.expand-horizontal {
+	width: 74.5%
+}
+.collapse-horizontal {
+	width: 24.5%;
+	border-right: 2.5px grey solid;
+}
+.collapse-vertical {
+	height: 16%;
+}
+.expand-vertical {
+	height: 83.5%;
+	overflow-y: hidden;
+}
+
+/* topcoat */
+.topcoat-list {
+	height: 100%;
+	overflow: hidden;
+}
+
+.topcoat-list__header {
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
+.topcoat-list--light {
+  border-top: 1px solid #bcbfbf;
+  border-bottom: 1px solid #eff1f1;
+  background-color: #dfe2e2;
+}
+
+.topcoat-list__header--light {
+  padding: 4px 20px;
+  font-size: 0.9em;
+  font-weight: 400;
+  background-color: #cccfcf;
+  color: #656565;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.23);
+}
+
+.topcoat-list__container--light {
+  border-top: 1px solid #bcbfbf;
+  color: #454545;
+}
+
+.topcoat-list__item--light {
+  padding: 1.25rem;
+  border-top: 1px solid #eff1f1;
+  border-bottom: 1px solid #bcbfbf;
+}
+
+.topcoat-list__item--light:first-child {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* app */
+.app-list__item--horizontal:first-child {
+	border-top: none;
+}
+.app-list__item--horizontal {
+	width: 20%;
+	float: left;
+	height: 26%;
+	border-left: 1px solid #5e6061;
+	border-right: 1px solid #2f3234;
+	border-top: none;
+	border-bottom: none;
+}
+.actions-list__container, .projects-list__container {
+	overflow: auto;
+	height: 92%;
+}
+.action-form {
+	height: 100%;
+	background-color: #444849;
+}
+.action-form form {
+	padding: 5%;
+}
+.action-form__title {
+	width: 80%;
+	margin-bottom: 5%;
+	font-size: 1.5rem;
+}
+.action-form__description {
+	width: 100%;
+	height: 30%;
+	max-height: 250px;
+	line-height: 1.8rem;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+.action-form__status {
+	height: 3rem !important;
+	width: 3rem !important;
+}
+.action-form__status--checkbox:before {
+	width: 3rem;
+	height: 3rem;
+}
+.action-form__status--checkbox:after {
+	width: 41px;
+	height: 15px;
+}
+.action-form__op {
+	width: 49%;
+	margin-top: 5%;
+}
+.projects-list__item {
+	height: 3.7rem;
+	padding: 0.3rem;
+}
+.action-form__header {
+	padding: 4px 5px;
+}
+.topcoat-checkbox__checkmark--light:before {
+  background: #e5e9e8;
+  border: 1px solid #a5a8a8;
+  box-shadow: inset 0 1px #fff;
+}
+.topcoat-checkbox__checkmark--light:after {
+  border: 7px solid #666;
+  border-top: none;
+  border-right: none;
+}
+/* projects link to action */
+.project-form__status {
+	height: 1.2rem !important;
+	width: 1.2rem !important;
+}
+.project-form__status--checkbox:before {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.project-form__status--checkbox:after {
+	width: 18px;
+	height: 7px;
+}
+.app-list__item--unselected {
+	opacity: 0.5;
+}
+.app-list__item--selected {
+	opacity: 1;
+}
+.app-list--vertical {
+    display: inline-block;
+    overflow: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+}
+.app-list--vertical li {
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px solid #5e6061;
+	border-top: 1px solid #5e6061;
+	height: 3.7rem;
+	width: 4.7rem;
+	padding: 0.3rem;
+}
+.app-list--vertical li:first-child {
+	margin-left: 1px;
+	border-top: 1px solid #5e6061;
+}
+.app-slide-component {
+	-webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  bottom: -523%;
+}
+.app-slide-component__bottom {
+	bottom: -100%;
+}
+.app-slide-component__top {
+	top: -100%;
+}

@@ -1,36 +1,37 @@
 define([
-	'backbone'
-], function(Backbone){
+	'backbone',
+	'services/utils'
+], function(Backbone, Utils){
 
 	var ProjectModel = Backbone.Model.extend({
 
 		defaults: {
-			id: '???',
-			name: 'Project name'
+			id: Utils.guid(),
+			title: '',
+			desc: '',
+			rate: ''
 		},
 
 		initialize: function (){
-			console.log( 'ProjectModel initialized:' + this.getId() );
-
 			this.bind('invalid', function(model, error){
 				console.log( error );
 			});
+
+			//todo: listen to action status change to update rate
 		},
 
-		getId: function(){
-			return this.get('id');
-		},
+		validate: function(attrs) {
+			var validations = {};
 
-		setText : function(value) {
-			this.set({ text : value, validate: true });
-		},
-
-		validate: function( attrs ) {
-			console.log('validate');
-			if(attrs.text === '') {
-				return 'text must be non empty';
+			if(attrs.title === '') {
+				validations['ERRVAL301'] = 'title must be non empty';
 			}
-		}
+
+			if(_.keys(validations).length === 0)
+				return null;
+			else
+				return validations;
+		},
 
 	});
 

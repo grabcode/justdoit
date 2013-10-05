@@ -4,7 +4,7 @@ define([
 
 	var ActionsView = Backbone.View.extend({
 
-		el: $('#actions-container'),
+		el: $('#sub-container'),
 
 		initialize: function(){
 			this.template = _.template($('#actions-template').html());
@@ -19,7 +19,7 @@ define([
 
 		render: function(){
 			var renderedContent = this.template({ actions: this.collection.toJSON() });
-			$(this.el).html(renderedContent);
+			this.$el.html(renderedContent);
 			return this;
 		}
 

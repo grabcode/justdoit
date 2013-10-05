@@ -11,7 +11,12 @@ define([
 		localStorage: new Store('projects'),
 
 		initialize: function(prop){
-			console.log('ProjectsCollection initialized');
+			this.bind('add', function(model){
+				model.save();
+				if(model.validationError !== null){
+					console.log('error!', this.remove(model));
+				}
+			});
 		}
 
 	});
